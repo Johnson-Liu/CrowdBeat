@@ -1,0 +1,15 @@
+{
+    "applications": {
+        "App2": {
+            "applicationId": "wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8", 
+            "masterKey": "28z8HAN9aGNWBMLgsBPI5NJ25ybdiyPdYxlyBC2O", 
+            "javascriptKey": "yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB"
+        }, 
+        "_default": {
+            "link": "App2"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.1"
+    }
+}
