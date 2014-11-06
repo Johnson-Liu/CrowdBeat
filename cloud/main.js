@@ -3,5 +3,5 @@
 // For example:
 Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
 Parse.Cloud.define("hello", function(request, response) {
-  response.success("Im hungry");
+  response.success("Welcome! Enjoy your Show!");
 });
