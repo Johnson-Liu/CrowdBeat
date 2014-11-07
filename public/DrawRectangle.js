@@ -13,8 +13,7 @@
   colors[8] = ["#E45CFF", "#E770FF", "#EB85FF", "#EE99FF"];
   colors[9] = ["#EB85FF", "#EE99FF", "#F1ADFF", "#F5C2FF"];
   colors[10] = ["#F1ADFF", "#F5C2FF", "#F8D6FF", "#FCEBFF"];
-  //change the color[11] the same as the color[10]
-  colors[11] = ["#F1ADFF", "#F5C2FF", "#F8D6FF", "#FCEBFF"];
+  colors[11] = ["#FCEBFF", "#FCEBFF", "#FCEBFF", "#FCEBFF"];
   //colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","#FFFFFF"];
   //colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","black"];
 
