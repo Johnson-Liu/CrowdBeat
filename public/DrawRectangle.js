@@ -2,6 +2,7 @@
   var colors = ["second1", "second2", "second3","second4", "second5","second6","second7","second8","second9","second10","second11","second12"];
 
   colors[0] = ["#110014","#220029", "#33003D","#440052"];
+  //colors[0] = ["white","#220029", "#33003D","#440052"];
   colors[1] = ["#33003D","#440052", "#520063","#66007A"];
   colors[2] = ["#520063", "#66007A", "#77008F","#8800A3"];
   colors[3] = ["#77008F", "#8800A3", "#9900B8","#AA00CC"];
@@ -12,11 +13,13 @@
   colors[8] = ["#E45CFF", "#E770FF", "#EB85FF", "#EE99FF"];
   colors[9] = ["#EB85FF", "#EE99FF", "#F1ADFF", "#F5C2FF"];
   colors[10] = ["#F1ADFF", "#F5C2FF", "#F8D6FF", "#FCEBFF"];
-  colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","#FFFFFF"];
+  //change the color[11] the same as the color[10]
+  colors[11] = ["#F1ADFF", "#F5C2FF", "#F8D6FF", "#FCEBFF"];
+  //colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","#FFFFFF"];
+  //colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","black"];
 
   //#FFFFFF means white color
   //#000000 means black color
-
 
 function main() { 
   // alert(colors[0][0]);
@@ -59,11 +62,11 @@ function main() {
 
 function colorChange(context, r) {
   //clear all the screen
-   context.clearRect(0, 0, 4000, 3000);
+   context.clearRect(0, 0, 1000, 1000);
    //give color to the paint
-   context.fillStyle = "white";
+   //context.fillStyle = "white";
    //paint the background color
-   context.fillRect(0, 0, 4000, 3000);
+   //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
    var randomMark = getRandomInt(0,colors[0].length);
    context.fillStyle = colors[colorLoop][randomMark];
