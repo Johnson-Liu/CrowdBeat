@@ -14,33 +14,8 @@
   colors[8] = ["#E45CFF", "#E770FF", "#EB85FF", "#EE99FF"];
   colors[9] = ["#EB85FF", "#EE99FF", "#F1ADFF", "#F5C2FF"];
   colors[10] = ["#F1ADFF", "#F5C2FF", "#F8D6FF", "#FCEBFF"];
-  colors[11] = ["#FCEBFF", "#FCEBFF", "#FCEBFF", "#FCEBFF"];
-  //colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","#FFFFFF"];
-  //colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","black"];
-  //test color array
-  // colors[0] = ["black","black","black","black"];
-  // colors[1] = ["red","red","red","red"];
-  // colors[2] = ["black","black","black","black"];
-  // colors[3] = ["red","red","red","red"];
-  // colors[4] = ["black","black","black","black"];
-  // colors[5] = ["red","red","red","red"];
-  // colors[6] = ["black","black","black","black"];
-  // colors[7] = ["red","red","red","red"];
-  // colors[8] = ["black","black","black","black"];
-  // colors[9] = ["red","red","red","red"];
-  // colors[10] = ["black","black","black","black"];
-  // colors[11] = ["red","red","red","red"];
-
-
-
-
-
-
-
-
-
-
-
+  //replace the white color
+  colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","#FCEBFF"];
 
   //#FFFFFF means white color
   //#000000 means black color
@@ -91,8 +66,9 @@ function colorChange(context, r) {
    //paint the background color
    //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
-   context.clearRect(0, 0, 1000, 1000);   
-   var randomMark = getRandomInt(0,3);
+   context.clearRect(0, 0, 1000, 1000);
+   var colorLength  =  colors[0].length - 1; 
+   var randomMark = getRandomInt(0 , colorLength);
    context.fillStyle = colors[colorLoop][randomMark];
    //draw the block in the middle
    context.fillRect(0, 0, 1000, 1000);
@@ -109,12 +85,3 @@ function colorChange(context, r) {
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-// function sleep(milliseconds) {
-//   var start = new Date().getTime();
-//   for (var i = 0; i < 1e7; i++) {
-//     if ((new Date().getTime() - start) > milliseconds){
-//       break;
-//     }
-//   }
-// }
