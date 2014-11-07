@@ -1,34 +1,35 @@
-  var colorLoop;
+  var colorLoop = 0;
   var colors = ["second1", "second2", "second3","second4", "second5","second6","second7","second8","second9","second10","second11","second12"];
+  var myDate = new Date();
 
-  // colors[0] = ["#110014","#220029", "#33003D","#440052"];
-  // //colors[0] = ["white","#220029", "#33003D","#440052"];
-  // colors[1] = ["#33003D","#440052", "#520063","#66007A"];
-  // colors[2] = ["#520063", "#66007A", "#77008F","#8800A3"];
-  // colors[3] = ["#77008F", "#8800A3", "#9900B8","#AA00CC"];
-  // colors[4] = ["#9900B8", "#AA00CC", "#BB00E0","#CC00F5"];
-  // colors[5] = ["#BB00E0", "#CC00F5", "#D60AFF", "#DA1FFF"];
-  // colors[6] = ["#D60AFF", "#DA1FFF", "#DD33FF","#E047FF"];
-  // colors[7] = ["#DD33FF", "#E047FF","#E45CFF","#E770FF"];
-  // colors[8] = ["#E45CFF", "#E770FF", "#EB85FF", "#EE99FF"];
-  // colors[9] = ["#EB85FF", "#EE99FF", "#F1ADFF", "#F5C2FF"];
-  // colors[10] = ["#F1ADFF", "#F5C2FF", "#F8D6FF", "#FCEBFF"];
-  // colors[11] = ["#FCEBFF", "#FCEBFF", "#FCEBFF", "#FCEBFF"];
+  colors[0] = ["#110014","#220029", "#33003D","#440052"];
+  //colors[0] = ["white","#220029", "#33003D","#440052"];
+  colors[1] = ["#33003D","#440052", "#520063","#66007A"];
+  colors[2] = ["#520063", "#66007A", "#77008F","#8800A3"];
+  colors[3] = ["#77008F", "#8800A3", "#9900B8","#AA00CC"];
+  colors[4] = ["#9900B8", "#AA00CC", "#BB00E0","#CC00F5"];
+  colors[5] = ["#BB00E0", "#CC00F5", "#D60AFF", "#DA1FFF"];
+  colors[6] = ["#D60AFF", "#DA1FFF", "#DD33FF","#E047FF"];
+  colors[7] = ["#DD33FF", "#E047FF","#E45CFF","#E770FF"];
+  colors[8] = ["#E45CFF", "#E770FF", "#EB85FF", "#EE99FF"];
+  colors[9] = ["#EB85FF", "#EE99FF", "#F1ADFF", "#F5C2FF"];
+  colors[10] = ["#F1ADFF", "#F5C2FF", "#F8D6FF", "#FCEBFF"];
+  colors[11] = ["#FCEBFF", "#FCEBFF", "#FCEBFF", "#FCEBFF"];
   //colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","#FFFFFF"];
   //colors[11] = ["#F5C2FF", "#F8D6FF", "#FCEBFF","black"];
   //test color array
-  colors[0] = ["black","black","black","black"];
-  colors[1] = ["red","red","red","red"];
-  colors[2] = ["black","black","black","black"];
-  colors[3] = ["red","red","red","red"];
-  colors[4] = ["black","black","black","black"];
-  colors[5] = ["red","red","red","red"];
-  colors[6] = ["black","black","black","black"];
-  colors[7] = ["red","red","red","red"];
-  colors[8] = ["black","black","black","black"];
-  colors[9] = ["red","red","red","red"];
-  colors[10] = ["black","black","black","black"];
-  colors[11] = ["red","red","red","red"];
+  // colors[0] = ["black","black","black","black"];
+  // colors[1] = ["red","red","red","red"];
+  // colors[2] = ["black","black","black","black"];
+  // colors[3] = ["red","red","red","red"];
+  // colors[4] = ["black","black","black","black"];
+  // colors[5] = ["red","red","red","red"];
+  // colors[6] = ["black","black","black","black"];
+  // colors[7] = ["red","red","red","red"];
+  // colors[8] = ["black","black","black","black"];
+  // colors[9] = ["red","red","red","red"];
+  // colors[10] = ["black","black","black","black"];
+  // colors[11] = ["red","red","red","red"];
 
 
 
@@ -56,7 +57,7 @@ function main() {
   var context = canvas.getContext('2d');
   // s = myDate.getSeconds();
   //alert(s);
-  var myDate = new Date();
+
   // sleep(3000);
   s =  myDate.getSeconds();
   //alert(s2);
@@ -72,7 +73,7 @@ function main() {
 
     s = s+1;
     // there are six colors
-    r = (s%colors.length);
+    r = s%colors.length;
     //alert(colors.length);
     colorLoop = r;
     // alert(s);
@@ -85,20 +86,20 @@ function main() {
 
 function colorChange(context, r) {
   //clear all the screen
-   context.clearRect(0, 0, 1000, 1000);
    //give color to the paint
    //context.fillStyle = "white";
    //paint the background color
    //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
-   var randomMark = getRandomInt(0,colors[0].length);
+   context.clearRect(0, 0, 1000, 1000);   
+   var randomMark = getRandomInt(0,3);
    context.fillStyle = colors[colorLoop][randomMark];
    //draw the block in the middle
    context.fillRect(0, 0, 1000, 1000);
   colorLoop = colorLoop + 1;
    if(colorLoop ==colors.length){
     colorLoop =0;
-   }         
+   }      
 }
 
 /**
