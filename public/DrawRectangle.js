@@ -85,3 +85,10 @@ function colorChange(context, r) {
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+function manualColorSet(){
+  //function to manually set color
+  // preload array of colors
+  // draw rectangle with certain color based on how much time has passed
+  // how do we get this to work for multiple users? 
+  //  should we make an admin page that sets variables and dates? 
+}
