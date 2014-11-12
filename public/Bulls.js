@@ -1,96 +1,96 @@
-  var colorLoop = 0;
-  var colors = ["second1", "second2", "second3","second4"];
-  var myDate = new Date();
-  var words1 = ["GO", "BULLS"];
+  var colorLoop1 = 0;
+  var colors1 = ["second1", "second2", "second3","second4"];
+  var myDate1 = new Date();
+  var words2 = ["GO", "BULLS"];
 
-  colors[0] = ["#D4001F","#000000","#FFFFFF"];
-  colors[1] = ["#000000","#000000","#000000"];
-  colors[2] = ["#FFFFFF","#FFFFFF","#FFFFFF"];
-  colors[3] = ["#D4001F","#000000","#FFFFFF"];
+  colors1[0] = ["#D4001F","#000000","#FFFFFF"];
+  colors1[1] = ["#000000","#000000","#000000"];
+  colors1[2] = ["#FFFFFF","#FFFFFF","#FFFFFF"];
+  colors1[3] = ["#D4001F","#000000","#FFFFFF"];
 
   //#FFFFFF means white color
   //#000000 means black color
 
-function main() { 
+function BullsMain() { 
   // alert(colors[0][0]);
-  var canvas = document.getElementById('example');  
-  canvas.width = innerWidth;
-  canvas.height = innerHeight;
-  if (!canvas) { 
+  var canvas1 = document.getElementById('example1');  
+  canvas1.width = innerWidth;
+  canvas1.height = innerHeight;
+  if (!canvas1) { 
     console.log('Failed to retrieve the <canvas> element');
     return false; 
   } 
   //alert("test1");
   // Get the rendering context for 2DCG
-  var context = canvas.getContext('2d');
+  var context1 = canvas1.getContext('2d');
   // s = myDate.getSeconds();
   //alert(s);
 
   // sleep(3000);
-  s =  myDate.getSeconds();
+  s1 =  myDate1.getSeconds();
   //alert(s2);
 
   //let the code sleep until another new second comes
   while(true){
-    var TempDate = new Date();
-    ms = TempDate.getMilliseconds();
+    var TempDate1 = new Date();
+    ms1 = TempDate1.getMilliseconds();
     // s = s+1;
-    if(ms == 0)
+    if(ms1 == 0)
       break;
   }
 
-    s = s+1;
-    r = s%colors.length;
+    s1 = s1+1;
+    r1 = s1%colors1.length;
     //alert(colors.length);
-    colorLoop = r;
+    colorLoop1 = r1;
     // alert(s);
     //  every 1000ms, run the colorChange function
-    var interal = setInterval(function () {
-        colorChange(context,r);
+    var interal1 = setInterval(function () {
+        colorChange1(context1,r1);
     }, 1000);
 }
 
 
-function colorChange(context, r) {
+function colorChange1(context1, r1) {
   //clear all the screen
    //give color to the paint
    //context.fillStyle = "white";
    //paint the background color
    //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
-   context.clearRect(0, 0, innerWidth, innerHeight);
-   var colorLength  =  colors[0].length - 1; 
-   var randomMark = getRandomInt(0 , colorLength);
-   context.fillStyle = colors[colorLoop][randomMark];
+   context1.clearRect(0, 0, innerWidth, innerHeight);
+   var colorLength1  =  colors1[0].length - 1; 
+   var randomMark1 = getRandomInt(0 , colorLength1);
+   context1.fillStyle = colors1[colorLoop1][randomMark1];
    //draw the block in the middle
-   context.fillRect(0, 0, innerWidth, innerHeight);
+   context1.fillRect(0, 0, innerWidth, innerHeight);
 
    //show the words
-    if(colorLoop == 1){
+    if(colorLoop1 == 1){
     //set the font
-    context.font = "300px Georgia";
+    context1.font = "300px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
-    context.fillStyle = "#FFFFFF";
+    context1.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[0], innerWidth*0.27, innerHeight*0.57);
+    context1.fillText(words2[0], innerWidth*0.27, innerHeight*0.57);
 
     }
-    else if(colorLoop == 2){
+    else if(colorLoop1 == 2){
     //set the font
-    context.font = "300px Georgia";
+    context1.font = "300px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
-    context.fillStyle = "#000000";
+    context1.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText(words1[1], innerWidth*0.01, innerHeight*0.57);
+    context1.fillText(words2[1], innerWidth*0.01, innerHeight*0.57);
     }
 
-   colorLoop = colorLoop + 1;
-   if(colorLoop ==colors.length){
-    colorLoop =0;
+   colorLoop1 = colorLoop1 + 1;
+   if(colorLoop1 ==colors1.length){
+    colorLoop1 =0;
    }      
 }
 
