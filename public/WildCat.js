@@ -78,46 +78,46 @@ function colorChange(context, r) {
    //show the words
     if(colorLoop == 1){
     //set the font
-    context.font = "100px Georgia";
+    context.font = "300px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[0], innerWidth*0.32, innerHeight*0.5);
+    context.fillText(words1[0], innerWidth*0.27, innerHeight*0.57);
 
     }
     else if(colorLoop == 3){
     //set the font
-    context.font = "100px Georgia";
+    context.font = "300px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[1], innerWidth*0.17, innerHeight*0.5);
+    context.fillText(words1[1], innerWidth*0.1, innerHeight*0.57);
     }
     else if(colorLoop == 5){
     //set the font
-    context.font = "100px Georgia";
+    context.font = "300px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[2],innerWidth*0.17, innerHeight*0.5);
+    context.fillText(words1[2],innerWidth*0.1, innerHeight*0.57);
     }
     else if(colorLoop == 8){
     //set the font
-    context.font = "100px Georgia";
+    context.font = "300px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[0],innerWidth*0.32,innerHeight*0.3);
-    context.fillText(words1[1],innerWidth*0.17,innerHeight*0.5);
-    context.fillText(words1[2],innerWidth*0.17,innerHeight*0.7);
+    context.fillText(words1[0],innerWidth*0.27,innerHeight*0.25);
+    context.fillText(words1[1],innerWidth*0.1,innerHeight*0.5);
+    context.fillText(words1[2],innerWidth*0.1,innerHeight*0.75);
     }
 
    colorLoop = colorLoop + 1;
