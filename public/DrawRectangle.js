@@ -1,6 +1,7 @@
   var colorLoop = 0;
   var colors = ["second1", "second2", "second3","second4", "second5","second6","second7","second8","second9","second10","second11","second12"];
   var myDate = new Date();
+  var words1 = ["GO", "WILD", "CATS", "GO WILDCATS"];
 
   colors[0] = ["#110014","#220029", "#33003D","#440052"];
   //colors[0] = ["white","#220029", "#33003D","#440052"];
@@ -23,6 +24,8 @@
 function main() { 
   // alert(colors[0][0]);
   var canvas = document.getElementById('example');  
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
   if (!canvas) { 
     console.log('Failed to retrieve the <canvas> element');
     return false; 
@@ -47,14 +50,13 @@ function main() {
   }
 
     s = s+1;
-    // there are six colors
     r = s%colors.length;
     //alert(colors.length);
     colorLoop = r;
     // alert(s);
     //  every 1000ms, run the colorChange function
     var interal = setInterval(function () {
-        colorChange(context,s);
+        colorChange(context,r);
     }, 1000);
 }
 
@@ -66,13 +68,59 @@ function colorChange(context, r) {
    //paint the background color
    //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
-   context.clearRect(0, 0, 1000, 1000);
+   context.clearRect(0, 0, innerWidth, innerHeight);
    var colorLength  =  colors[0].length - 1; 
    var randomMark = getRandomInt(0 , colorLength);
    context.fillStyle = colors[colorLoop][randomMark];
    //draw the block in the middle
-   context.fillRect(0, 0, 1000, 1000);
-  colorLoop = colorLoop + 1;
+   context.fillRect(0, 0, innerWidth, innerHeight);
+
+   //show the words
+    if(colorLoop == 1){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#FFFFFF";
+    //draw the words, and set the positon
+    context.fillText(words1[0], innerWidth*0.32, innerHeight*0.5);
+
+    }
+    else if(colorLoop == 3){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#FFFFFF";
+    //draw the words, and set the positon
+    context.fillText(words1[1], innerWidth*0.17, innerHeight*0.5);
+    }
+    else if(colorLoop == 5){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#FFFFFF";
+    //draw the words, and set the positon
+    context.fillText(words1[2],innerWidth*0.17, innerHeight*0.5);
+    }
+    else if(colorLoop == 8){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#FFFFFF";
+    //draw the words, and set the positon
+    context.fillText(words1[0],innerWidth*0.32,innerHeight*0.3);
+    context.fillText(words1[1],innerWidth*0.17,innerHeight*0.5);
+    context.fillText(words1[2],innerWidth*0.17,innerHeight*0.7);
+    }
+
+   colorLoop = colorLoop + 1;
    if(colorLoop ==colors.length){
     colorLoop =0;
    }      
@@ -92,3 +140,9 @@ function manualColorSet(){
   // how do we get this to work for multiple users? 
   //  should we make an admin page that sets variables and dates? 
 }
+// function winResize(){
+//     var canvas = document.getElementById('example');  
+//     canvas.width = innerWidth;
+
+//     canvas.height = innerHeight;
+// }
