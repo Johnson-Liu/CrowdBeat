@@ -68,7 +68,7 @@ function colorChange1(context1, r1) {
    //show the words
     if(colorLoop1 == 1){
     //set the font
-    context1.font = "300px Georgia";
+    context1.font = "100px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
@@ -79,7 +79,7 @@ function colorChange1(context1, r1) {
     }
     else if(colorLoop1 == 2){
     //set the font
-    context1.font = "300px Georgia";
+    context1.font = "100px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 

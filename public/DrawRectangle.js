@@ -84,7 +84,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[0], innerWidth*0.32, innerHeight*0.5);
+    context.fillText(words1[0], innerWidth*0.25, innerHeight*0.5);
 
     }
     else if(colorLoop == 3){
@@ -95,7 +95,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[1], innerWidth*0.17, innerHeight*0.5);
+    context.fillText(words1[1], innerWidth*0.10, innerHeight*0.5);
     }
     else if(colorLoop == 5){
     //set the font
@@ -105,7 +105,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[2],innerWidth*0.17, innerHeight*0.5);
+    context.fillText(words1[2],innerWidth*0.10, innerHeight*0.5);
     }
     else if(colorLoop == 8){
     //set the font
@@ -115,9 +115,9 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[0],innerWidth*0.32,innerHeight*0.3);
-    context.fillText(words1[1],innerWidth*0.17,innerHeight*0.5);
-    context.fillText(words1[2],innerWidth*0.17,innerHeight*0.7);
+    context.fillText(words1[0],innerWidth*0.25,innerHeight*0.3);
+    context.fillText(words1[1],innerWidth*0.10,innerHeight*0.5);
+    context.fillText(words1[2],innerWidth*0.10,innerHeight*0.7);
     }
 
    colorLoop = colorLoop + 1;
