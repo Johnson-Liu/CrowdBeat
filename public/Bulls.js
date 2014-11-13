@@ -1,12 +1,12 @@
   var colorLoop1 = 0;
   var colors1 = ["second1", "second2", "second3","second4"];
   var myDate1 = new Date();
-  var words2 = ["GO", "BULLS"];
+  var words2 = ["LET'S", "GO", "BULLS"];
 
-  colors1[0] = ["#D4001F","#000000","#FFFFFF"];
+  colors1[0] = ["#D4001F","#D4001F","#D4001F"];
   colors1[1] = ["#000000","#000000","#000000"];
   colors1[2] = ["#FFFFFF","#FFFFFF","#FFFFFF"];
-  colors1[3] = ["#D4001F","#000000","#FFFFFF"];
+  colors1[3] = ["#D4001F","#D4001F","#D4001F"];
 
   //#FFFFFF means white color
   //#000000 means black color
@@ -66,7 +66,18 @@ function colorChange1(context1, r1) {
    context1.fillRect(0, 0, innerWidth, innerHeight);
 
    //show the words
-    if(colorLoop1 == 1){
+    if(colorLoop1 == 0){
+    //set the font
+    context1.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context1.fillStyle = "#000000";
+    //draw the words, and set the positon
+    context1.fillText(words2[0], innerWidth*0.07, innerHeight*0.57);
+
+    }
+    else if(colorLoop1 == 1){
     //set the font
     context1.font = "100px Georgia";
     //set the textAlign
@@ -74,7 +85,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context1.fillText(words2[0], innerWidth*0.27, innerHeight*0.57);
+    context1.fillText(words2[1], innerWidth*0.27, innerHeight*0.57);
 
     }
     else if(colorLoop1 == 2){
@@ -85,7 +96,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#000000";
     //draw the words, and set the positon
-    context1.fillText(words2[1], innerWidth*0.01, innerHeight*0.57);
+    context1.fillText(words2[2], innerWidth*0.01, innerHeight*0.57);
     }
 
    colorLoop1 = colorLoop1 + 1;
