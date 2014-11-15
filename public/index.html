@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="Wildcat.js"></script>
 	
 	<script type="text/javascript" src="DrawRectangle.js"></script>
+	<script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
 </head>
 <body>
 	<div id="home" data-role="page" class="type-interior" data-theme="a">
@@ -27,6 +28,7 @@
 		<div data-role="content" data-theme="a">
 				<a href="#slide" type="button" data-theme="a" data-transition="slide">Sporting Events</a>
 				<a href="#slideup" type="button" data-theme="a" data-transition="slide">Concerts</a>
+				<a href="#flip" type="button" onclick="getPodOffset()"data-theme="a" data-transition="slide">Timer Test</a>
 			<br />
 		</div>
 	</div>
@@ -137,14 +139,33 @@
 		</div>
 	</div>	
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	
+    <script type="text/javascript">
+    Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
+    
+    function getPodOffset() {
+      var id = + document.getElementById("pod").value;
+      Parse.Cloud.run("getOffset", { pod: id }, {
+        success: function(obj) {
+          alert(obj.pod + " offset = " + (obj.offset / 1000) + " seconds");
+        },
+        failure: function(error) {
+          alert("pod " + id + " error: " + error.message);
+        }
+      });
+    }
+    </script>
 		<div id="flip" data-role="page" data-theme="a">
 		<div data-role="header">
 			<h1>flip</h1>
 			<a data-icon="home" data-rel="back" style="margin-top:2px;">Home</a>
 		</div>
 		<div data-role="content" data-theme="a">	
-			<h1>This is a test page</h1>
-			<p> Click home to go back </p>
+			<h1>Timer Test</h1>
+      
+		      <p><label>Pod #: <input type="text" id="pod" name="pod" value="1"></label></p>
+		      
+		      <p><button type="button" onclick="getPodOffset()">Get Offset</p>
 		</div>
 		<div data-role="footer">
 			<div class="center-image"><h4><a href="http://www.pietervanos.net" data-theme="a" data-inline="true" style="color:white;" TARGET="_blank">Visit here our desktop webpage</a>
