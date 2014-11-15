@@ -42,3 +42,15 @@ function createPod(id, response) {
 function makeOffset(obj) {
   return { pod: obj.get("podId"), offset: new Date() - obj.get("start") };
 }
+// This is code that I have added, it is different from Riesbeck's
+// The goal is to hopefully reset the timer 
+Parse.Cloud.define("resetTimer", function(request, response) {
+  var query = new Parse.Query("Pod");
+  var id = + request.params.pod;
+  query.equalTo("podId", id); 
+  query.first({
+  	success: function(obj) {
+  		createPod(id, response);
+  	}
+  	});
+});

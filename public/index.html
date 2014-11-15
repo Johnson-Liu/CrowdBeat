@@ -154,6 +154,17 @@
         }
       });
     }
+    function resetTimer1() {
+      var id = + document.getElementById("pod").value;
+      Parse.Cloud.run("resetTimer", { pod: id }, {
+        success: function(obj) {
+          alert(obj.pod + " offset = " + (obj.offset / 1000) + " seconds");
+        },
+        failure: function(error) {
+          alert("pod " + id + " error: " + error.message);
+        }
+      });
+    }
     </script>
 		<div id="flip" data-role="page" data-theme="a">
 		<div data-role="header">
@@ -166,6 +177,7 @@
 		      <p><label>Pod #: <input type="text" id="pod" name="pod" value="1"></label></p>
 		      
 		      <p><button type="button" onclick="getPodOffset()">Get Offset</p>
+		      <p><button type="button" onclick="resetTimer1()">Reset Timer</p>
 		</div>
 		<div data-role="footer">
 			<div class="center-image"><h4><a href="http://www.pietervanos.net" data-theme="a" data-inline="true" style="color:white;" TARGET="_blank">Visit here our desktop webpage</a>
