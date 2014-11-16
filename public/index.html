@@ -154,6 +154,7 @@
         }
       });
     }
+    // this should reset the clock but it doesn't
     function resetTimer1() {
       var id = + document.getElementById("pod").value;
       Parse.Cloud.run("resetTimer", { pod: id }, {

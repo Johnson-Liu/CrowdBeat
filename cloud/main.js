@@ -30,7 +30,7 @@ function createPod(id, response) {
   var pod = new Pod();
   
   pod.save({ podId: id, start: new Date() }, {
-    success: function(obj) {
+    success: function(osbj) {
       response.success(makeOffset(obj));
     },
     error: function(obj, error) {
@@ -50,7 +50,7 @@ Parse.Cloud.define("resetTimer", function(request, response) {
   query.equalTo("podId", id); 
   query.first({
   	success: function(obj) {
-  		createPod(id, response);
+  		createPod(id, response);	
   	}
   	});
 });
