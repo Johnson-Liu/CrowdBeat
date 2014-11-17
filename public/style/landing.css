@@ -1,0 +1,20 @@
+html, body{
+
+	background-color: #34b5d7;
+}
+
+#icon{
+	max-width: 80%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 25%;
+	margin-bottom: 8%;
+	display:block;
+}
+
+#logo{
+	max-width: 80%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
