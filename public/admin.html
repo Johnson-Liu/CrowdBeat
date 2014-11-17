@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CrowdBeat</title>
+    <link rel="stylesheet" type="text/css" href="DrawRectangle.css">
+    <script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1>adminPage</h1>
+
+    </a>
+    <!-- <button onclick="alertQ()">Save into Test Object</button>
+    <button onclick="returnQ()">Return Result</button> -->
+    <button onclick="start()">Show Start!</button>
+    <button onclick="setStartTime()">Set Start Time</button>
+    <button onclick="getState()">Get State</button>   
+
+    <div class="object_data"></div>
+    <div>
+    <script type="text/javascript" src="main.js">
+     Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
+      Parse.Cloud.run('hello', {}, {
+       success: function(result) {
+         
+         // Show result as an alert
+          alert(result);
+       },
+       error: function(error) {
+       } 
+      });
+     </script>
+
+    <script type="text/javascript">
+
+       function getState(){
+          Parse.initialize("R1hjTepo1Qyv2WVVYxD6g5K2CVqqGIXPLjqPmsZF", "eLLqf2YbjLgt8aNvsQyasUIL2jTEgoBvCDH1bRmI");
+          var BulbObj = Parse.Object.extend("Bulb") ;
+          var ParseQuery = new Parse.Query(BulbObj);
+          var query = ParseQuery.select("State");
+          alert("getState");
+          query.get("AbUQiOYkBN", {
+          success: function(BulbObj) {
+          // The object was retrieved successfully.
+          var result = BulbObj.get("State");
+          alert(result); 
+          // alert(getresult.value);
+          //  alert(query.value);
+          console.log(query);
+         // results has the list of users with a hometown team with a winning record
+         }
+         });
+        };
+
+
+      function start(){
+          Parse.initialize("R1hjTepo1Qyv2WVVYxD6g5K2CVqqGIXPLjqPmsZF", "eLLqf2YbjLgt8aNvsQyasUIL2jTEgoBvCDH1bRmI");
+          //get the million seconds since 1970
+          var d = new Date();
+          var StartTimeMS = d.getTime();
+
+          var BulbObj = Parse.Object.extend("Bulb");
+          var bulbObj1 = new BulbObj();
+          bulbObj1.id = "AbUQiOYkBN";
+          bulbObj1.set("TimeValue", StartTimeMS);
+          bulbObj1.set("State", true);
+
+          bulbObj1.save();
+      }
+
+
+
+    </script>
+
+ 
+    </div>
+  </body>
+</html>
