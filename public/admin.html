@@ -12,8 +12,8 @@
     <!-- <button onclick="alertQ()">Save into Test Object</button>
     <button onclick="returnQ()">Return Result</button> -->
     <button onclick="start()">Show Start!</button>
-    <button onclick="setStartTime()">Set Start Time</button>
-    <button onclick="getState()">Get State</button>   
+    <button onclick="setStop()">Stop the Show</button>
+
 
     <div class="object_data"></div>
     <div>
@@ -51,7 +51,6 @@
          });
         };
 
-
       function start(){
           Parse.initialize("R1hjTepo1Qyv2WVVYxD6g5K2CVqqGIXPLjqPmsZF", "eLLqf2YbjLgt8aNvsQyasUIL2jTEgoBvCDH1bRmI");
           //get the million seconds since 1970
@@ -67,7 +66,18 @@
           bulbObj1.save();
       }
 
+      function setStop(){
+        Parse.initialize("R1hjTepo1Qyv2WVVYxD6g5K2CVqqGIXPLjqPmsZF", "eLLqf2YbjLgt8aNvsQyasUIL2jTEgoBvCDH1bRmI");
 
+          var BulbObj = Parse.Object.extend("Bulb");
+          var bulbObj1 = new BulbObj();
+          bulbObj1.id = "AbUQiOYkBN";
+          bulbObj1.set("TimeValue", 0);
+          bulbObj1.set("State", false);
+
+          bulbObj1.save();
+
+      }
 
     </script>
 
