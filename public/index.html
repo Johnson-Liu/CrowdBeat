@@ -68,7 +68,8 @@
 			<a data-icon="home" data-rel="back" style="margin-top:2px;">Home</a>
 		</div>
 		<div data-role="content" data-theme="a">	
-			<h1>Concert Lightshows<br> coming soon!</h1>
+			<h1>Concert Lightshows<br> Trigger Testing</h1>
+            <a type="button" data-theme="a" onclick="QueryServer()" data-transition="pop">Start Bulb</a>
 		</div>
 	</div>	
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -157,31 +158,49 @@
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	
     <script type="text/javascript">
-    Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
-    
-    function getPodOffset() {
-      var id = + document.getElementById("pod").value;
-      Parse.Cloud.run("getOffset", { pod: id }, {
-        success: function(obj) {
-          alert(obj.pod + " offset = " + (obj.offset / 1000) + " seconds");
-        },
-        failure: function(error) {
-          alert("pod " + id + " error: " + error.message);
-        }
-      });
+    Parse.initialize("R1hjTepo1Qyv2WVVYxD6g5K2CVqqGIXPLjqPmsZF", "eLLqf2YbjLgt8aNvsQyasUIL2jTEgoBvCDH1bRmI");
+    // function QueryServer2(){ 
+    //       var BulbObj = Parse.Object.extend("Bulb") ;
+    //       var bulbObj1 = new BulbObj();
+    //       var ParseQuery = new Parse.Query(BulbObj);
+    //       //alert("getState");
+    //      ParseQuery.get("AbUQiOYkBN", {
+    //       success: function(bulbObj1) {
+    //         var result1 = bulbObj1.get("State");
+    //         localStorage.setItem("StateResult",result1);
+    //         alert(localStorage.getItem("StateResult"));
+    //      }
+    //      });
+    // }
+
+    function QueryServer(){
+          var BulbObj = Parse.Object.extend("Bulb") ;
+          var bulbObj1 = new BulbObj();
+          var ParseQuery = new Parse.Query(BulbObj);
+          //alert("getState");
+         ParseQuery.get("AbUQiOYkBN", {
+          success: function(bulbObj1) {
+            var StateResult = bulbObj1.get("State");
+            var TimeResult=  bulbObj1.get("TimeValue");
+            if(StateResult == false){
+                alert("The show hasn't started");
+            }
+            else{
+                //get the million seconds since 1970
+                var d = new Date();
+                var userTimeMS = d.getTime();
+                var timeOffset = userTimeMS - TimeResult;
+                alert(timeOffset); 
+                // alert("The show has started");
+                // <a href="#pop" data-theme="a" data-transition="pop"></a>
+
+            }
+         }
+         });  
+
     }
-    // this should reset the clock but it doesn't
-    function resetTimer1() {
-      var id = + document.getElementById("pod").value;
-      Parse.Cloud.run("resetTimer", { pod: id }, {
-        success: function(obj) {
-          alert(obj.pod + " offset = " + (obj.offset / 1000) + " seconds");
-        },
-        failure: function(error) {
-          alert("pod " + id + " error: " + error.message);
-        }
-      });
-    }
+
+
     </script>
 		<div id="flip" data-role="page" data-theme="a">
 		<div data-role="header">
