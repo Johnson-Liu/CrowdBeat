@@ -44,6 +44,7 @@ function makeOffset(obj) {
 }
 // This is code that I have added, it is different from Riesbeck's
 // The goal is to hopefully reset the timer 
+// don't think this works yet either
 Parse.Cloud.define("resetTimer", function(request, response) {
   var query = new Parse.Query("Pod");
   var id = + request.params.pod;
