@@ -5,11 +5,19 @@ html, body{
 
 
 #heading{
-
     font-size: 23px;
     font-weight: bold;
-    font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;
+    font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
+
+
+#subheading{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+    color:#34495e;
+}
+
 #smallIcon{
   height: 10vh;
   margin: 0 auto;
@@ -50,7 +58,7 @@ html, body{
 .round-button span{
     font-size: 23px;
     font-weight: bold;
-    font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;
+    font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
     padding-top:40%;
     text-align:center;
     text-transform: uppercase;
