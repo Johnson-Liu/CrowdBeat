@@ -51,6 +51,8 @@ function BullsMain() {
 }
 
 
+
+
 function colorChange1(context1, r1) {
   //clear all the screen
    //give color to the paint
