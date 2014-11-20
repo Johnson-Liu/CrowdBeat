@@ -4,6 +4,12 @@ html, body{
 }
 
 
+#heading{
+
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;
+}
 #smallIcon{
   height: 10vh;
   margin: 0 auto;
