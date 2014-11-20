@@ -219,8 +219,14 @@
                 var d = new Date();
                 var userTimeMS = d.getTime();
                 var timeOffset = userTimeMS - TimeResult;
+                if(timeOffset>=100000){
+                    alert("The show is over!")
+                }
+                else{
+                    BullsMain2(timeOffset);
+                }
                 //alert(timeOffset); 
-                BullsMain2(timeOffset);
+
                 // alert("The show has started");
                 // <a href="#pop" data-theme="a" data-transition="pop"></a>
             }

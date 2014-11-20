@@ -28,7 +28,7 @@ function BullsMain2(timeOffset) {
     var TempDate2 = new Date();
     ms2 = TempDate2.getMilliseconds();
     // s = s+1;
-    if(ms2 == 0)
+    if(ms2 == 0 || ms2 ==2 ||  ms2 ==4 ||  ms2 ==6 || ms2 ==8 || ms2 ==10)
       break;
   }
 
