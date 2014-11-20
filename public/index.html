@@ -128,7 +128,7 @@
     </script>
 		<div id="slidedown" data-role="page" data-theme="a">
 		<div data-role="header">
-			<h1>Go Wildcats!</h1>
+			<h1 id="heading">WILDCATS</h1>
 			<a data-icon="back" data-rel="back" style="margin-top:2px;">Back</a>
 		</div>
 		<div data-role="content" data-theme="a" class="carrot">	
@@ -164,7 +164,11 @@
     </script>
 	<div id="pop" data-role="page" data-theme="a">
 		<div data-role="header">
+<<<<<<< HEAD
 			<h1>Bulls</h1>
+=======
+			<h1 id ="heading">CHICAGO BULLS</h1>
+>>>>>>> 42c4ed9fc548aea78467ec7d4e5bcab05156536a
 			<a data-icon="back" data-rel="back" style="margin-top:2px;">Back</a>
 		</div>
 		<div data-role="content" data-theme="a" class="carrot">	
@@ -177,7 +181,11 @@
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 		<div id="fade" data-role="page" data-theme="a">
 		<div data-role="header">
+<<<<<<< HEAD
 			<h1>Hawks</h1>
+=======
+			<h1 id ="heading">BLACKHAWKS</h1>
+>>>>>>> 42c4ed9fc548aea78467ec7d4e5bcab05156536a
 			<a data-icon="back" data-rel="back" style="margin-top:2px;">Back</a>
 		</div>
 		<div data-role="content" data-theme="a">	
@@ -219,8 +227,14 @@
                 var d = new Date();
                 var userTimeMS = d.getTime();
                 var timeOffset = userTimeMS - TimeResult;
+                if(timeOffset>=100000){
+                    alert("The show is over!")
+                }
+                else{
+                    BullsMain2(timeOffset);
+                }
                 //alert(timeOffset); 
-                BullsMain2(timeOffset);
+
                 // alert("The show has started");
                 // <a href="#pop" data-theme="a" data-transition="pop"></a>
             }
