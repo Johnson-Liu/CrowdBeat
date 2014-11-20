@@ -1,15 +1,8 @@
 var colorLoop2 = 0;
-  var colors2 = ["second1", "second2", "second3","second4"];
   var myDate2 = new Date();
-  var words3 = ["LET'S", "GO", "BULLS"];
-
-  colors2[0] = ["#D4001F","#D4001F","#D4001F"];
-  colors2[1] = ["#000000","#000000","#000000"];
-  colors2[2] = ["#FFFFFF","#FFFFFF","#FFFFFF"];
-  colors2[3] = ["#D4001F","#D4001F","#D4001F"];
+  var words3 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"];
 
 function BullsMain2(timeOffset) { 
-  alert(timeOffset);
   // alert(colors[0][0]);
   var canvas2 = document.getElementById('example2');  
   canvas2.width = innerWidth;
@@ -23,10 +16,12 @@ function BullsMain2(timeOffset) {
   var context2 = canvas2.getContext('2d');
   // s = myDate.getSeconds();
   //alert(s);
+  var result = timeOffset/1000;///1000;
+  colorLoop2 = Math.floor(result);
 
-  // sleep(3000);
-  s2 =  myDate2.getSeconds();
-  //alert(s2);
+  //colorLoop2 = result;
+
+  console.log(colorLoop2);
 
   //let the code sleep until another new second comes
   while(true){
@@ -37,17 +32,16 @@ function BullsMain2(timeOffset) {
       break;
   }
 
-    s2 = s2+1;
-    r2 = s2%colors2.length;
-    //alert(colors.length);
-    colorLoop2 = r2;
-    // alert(s);
     //  every 1000ms, run the colorChange function
     var interal2 = setInterval(function () {
-        colorChange2(context2,r2);
+        colorChange2(context2);
+        if(colorLoop2 == words3.length){
+          clearInterval(interal2);
+        }
     }, 1000);
 }
-function colorChange2(context2, r2) {
+
+function colorChange2(context2) {
   //clear all the screen
    //give color to the paint
    //context.fillStyle = "white";
@@ -55,50 +49,16 @@ function colorChange2(context2, r2) {
    //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
    context2.clearRect(0, 0, innerWidth, innerHeight);
-   var colorLength2  =  colors2[0].length - 1; 
-   var randomMark2 = getRandomInt(0 , colorLength2);
-   context2.fillStyle = colors2[colorLoop2][randomMark2];
-   //draw the block in the middle
-   context2.fillRect(0, 0, innerWidth, innerHeight);
-
-   //show the words
-    if(colorLoop2 == 0){
-    //set the font
     context2.font = "100px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
     context2.fillStyle = "#000000";
-    //draw the words, and set the positon
-    context2.fillText(words3[0], innerWidth*0.07, innerHeight*0.57);
 
-    }
-    else if(colorLoop2 == 1){
-    //set the font
-    context2.font = "100px Georgia";
-    //set the textAlign
-    //context.textAlign = "left";
-    //set the color 
-    context2.fillStyle = "#FFFFFF";
-    //draw the words, and set the positon
-    context2.fillText(words3[1], innerWidth*0.27, innerHeight*0.57);
+    context2.fillText(words3[colorLoop2], innerWidth*0.07, innerHeight*0.57);
+  
 
-    }
-    else if(colorLoop2 == 2){
-    //set the font
-    context2.font = "100px Georgia";
-    //set the textAlign
-    //context.textAlign = "left";
-    //set the color 
-    context2.fillStyle = "#000000";
-    //draw the words, and set the positon
-    context2.fillText(words3[2], innerWidth*0.01, innerHeight*0.57);
-    }
-
-   colorLoop2 = colorLoop2 + 1;
-   if(colorLoop2 ==colors2.length){
-    colorLoop2 =0;
-   }      
+   colorLoop2 = colorLoop2 + 1; 
 }
 
 /**
