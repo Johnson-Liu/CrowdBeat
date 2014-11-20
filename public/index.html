@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
 	<link rel="stylesheet" href="DrawRectangle.css" />
 	<link rel="stylesheet" href="style/landing.css" />
+  <link rel="stylesheet" type="text/css" href="style/wireframe.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 	<script type="text/javascript" src="Bulls.js"></script>
@@ -21,7 +22,7 @@
 	<script type="text/javascript" src="Concert.js"></script>
 	
 	<script type="text/javascript" src="DrawRectangle.js"></script>
-	<script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
+	<!-- <script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script> -->
 </head>
 <body>
 	<div id="home" data-role="page" class="type-interior" data-theme="a">
@@ -41,21 +42,21 @@
 
 	<div id="test" data-role="page" class="type-interior" data-theme="a">
 		<div data-role="header" data-theme="a">
-			<!--<div class="center-image"><h1>Bulb</h1></div>-->
+		<img id="smallIcon" src="style/images/Bulb-logo-1.png">
 		</div>
-		<br />
 		<!--<div class="center-image"><img src="style/images/logo.png" style="width:100%"></img></div>-->
 		<div data-role="content" data-theme="a">
-				<a href="#slide" type="button" data-theme="a" data-transition="slide">Sporting Events</a>
-				<a href="#slideup" type="button" data-theme="a" data-transition="slide">Concerts</a>
-				<a href="#flip" type="button" data-theme="a" data-transition="slide">Timer Test</a>
-			<br />
+				<a href="#slide" type="button" data-theme="a" data-transition="slide" class="round-button">Sports</a>
+				<a href="#slideup" type="button" data-theme="a" data-transition="slide" class="round-button">Concerts</a>
+<!-- 				<a href="#flip" type="button" data-theme="a" data-transition="slide">Timer Test</a> -->
+      <img id="smallLogo" src="style/images/Bulb-icon-1.png">
 		</div>
 	</div>
 	
 	<div id="slide" data-role="page" data-theme="a">
 		<div data-role="header">
-			<h1>Sporting Events</h1>
+			<img id="smallIcon" src="style/images/Bulb-logo-1.png">
+      <h1>SPORTS</h1>
 			<a data-icon="home" data-rel="back" style="margin-top:2px;">Home</a>
 		</div>
 		<div data-role="content" data-theme="a">	
