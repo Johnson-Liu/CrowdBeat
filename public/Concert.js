@@ -8,7 +8,8 @@ var colorLoop2 = 0;
   colors2[2] = ["#FFFFFF","#FFFFFF","#FFFFFF"];
   colors2[3] = ["#D4001F","#D4001F","#D4001F"];
 
-function BullsMain2() { 
+function BullsMain2(timeOffset) { 
+  alert(timeOffset);
   // alert(colors[0][0]);
   var canvas2 = document.getElementById('example2');  
   canvas2.width = innerWidth;
