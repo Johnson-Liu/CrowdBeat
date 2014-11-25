@@ -56,18 +56,20 @@ function wildmain() {
     // alert(s);
     //  every 1000ms, run the colorChange function
     var interal = setInterval(function () {
-        colorChange(context,r);
+        colorChange(canvas,context,r);
     }, 1000);
 }
 
 
-function colorChange(context, r) {
+function colorChange(canvas,context, r) {
   //clear all the screen
    //give color to the paint
    //context.fillStyle = "white";
    //paint the background color
    //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
+   canvas.width = innerWidth;
+   canvas.height = innerHeight;
    context.clearRect(0, 0, innerWidth, innerHeight);
    var colorLength  =  colors[0].length - 1; 
    var randomMark = getRandomInt(0 , colorLength);
@@ -140,9 +142,42 @@ function manualColorSet(){
   // how do we get this to work for multiple users? 
   //  should we make an admin page that sets variables and dates? 
 }
-// function winResize(){
-//     var canvas = document.getElementById('example');  
-//     canvas.width = innerWidth;
+ function winResize(){
+     var canvas = document.getElementById('example');  
+     canvas.width = innerWidth;
 
-//     canvas.height = innerHeight;
-// }
+     canvas.height = innerHeight;
+     if (!canvas) { 
+    console.log('Failed to retrieve the <canvas> element');
+    return false; 
+  } 
+  //alert("test1");
+  // Get the rendering context for 2DCG
+  var context = canvas.getContext('2d');
+  // s = myDate.getSeconds();
+  //alert(s);
+
+  // sleep(3000);
+  s =  myDate.getSeconds();
+  //alert(s2);
+
+  //let the code sleep until another new second comes
+  while(true){
+    var TempDate = new Date();
+    ms = TempDate.getMilliseconds();
+    // s = s+1;
+    if(ms == 0)
+      break;
+  }
+
+    s = s+1;
+    r = s%colors.length;
+    //alert(colors.length);
+    colorLoop = r;
+    // alert(s);
+    //  every 1000ms, run the colorChange function
+    var interal = setInterval(function () {
+        colorChange(canvas,context,r);
+    }, 1000);
+}
+ }

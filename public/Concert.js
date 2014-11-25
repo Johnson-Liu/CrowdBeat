@@ -48,6 +48,9 @@ function colorChange2(context2) {
    //paint the background color
    //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
+    var canvas = document.getElementById('example2');  
+   canvas.width = innerWidth;
+   canvas.height = innerHeight;
    context2.clearRect(0, 0, innerWidth, innerHeight);
     context2.font = "100px Georgia";
     //set the textAlign

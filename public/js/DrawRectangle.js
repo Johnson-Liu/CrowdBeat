@@ -66,6 +66,10 @@ function colorChange(context, r) {
    //paint the background color
    //context.fillRect(0, 0, 4000, 3000);
    //give color to the paint
+    var canvas = document.getElementById('example');  
+    canvas.width = innerWidth;
+
+   canvas.height = innerHeight;
    context.clearRect(0, 0, 1000, 1000);
    var colorLength  =  colors[0].length - 1; 
    var randomMark = getRandomInt(0 , colorLength);
