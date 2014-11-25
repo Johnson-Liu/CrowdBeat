@@ -5,12 +5,8 @@ html, body{
 
 
 #heading{
-<<<<<<< HEAD
 
     font-size: 28px;
-=======
-    font-size: 23px;
->>>>>>> f28144bfed20cf9fb1700ea968dc7ff987802dfb
     font-weight: bold;
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
@@ -61,7 +57,7 @@ html, body{
 }
 
 .round-button span{
-    font-size: 23px;
+    font-size: 2.5vh;
     font-weight: bold;
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
     padding-top:40%;
@@ -71,11 +67,6 @@ html, body{
     text-shadow: none;
 }
 
-#arrow{
-  width: 8vw;
-  height: 8vh;
-  float: left;
-}
 
 .head a {
   margin-top:35px; 
