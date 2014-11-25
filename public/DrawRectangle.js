@@ -79,7 +79,7 @@ function colorChange(context, r) {
    context.fillRect(0, 0, innerWidth, innerHeight);
 
    //show the words
-    if(colorLoop == 0 ||colorLoop == 6){
+    if(colorLoop == 0){
     //set the font
     context.font = "100px Georgia";
     //set the textAlign
@@ -87,10 +87,10 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[0], innerWidth*0.25, innerHeight*0.5);
+    context.fillText("GO", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
 
     }
-    else if(colorLoop == 2 || colorLoop == 8){
+    else if(colorLoop == 1){
     //set the font
     context.font = "100px Georgia";
     //set the textAlign
@@ -98,9 +98,40 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText(words1[1], innerWidth*0.10, innerHeight*0.5);
+    context.fillText("U", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
     }
-    else if(colorLoop == 4  || colorLoop == 10 || colorLoop == 5  || colorLoop == 11  ){
+    else if(colorLoop == 2 ||colorLoop ==3 ){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#FFFFFF";
+    //draw the words, and set the positon
+    context.fillText("NU",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    }
+        if(colorLoop == 4){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#FFFFFF";
+    //draw the words, and set the positon
+    context.fillText("GO", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
+
+    }
+    else if(colorLoop == 5){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#FFFFFF";
+    //draw the words, and set the positon
+    context.fillText("U", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
+    }
+    else if(colorLoop == 6 || colorLoop ==7){
     //set the font
     context.font = "100px Georgia";
     //set the textAlign
@@ -108,8 +139,40 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText(words1[2],innerWidth*0.10, innerHeight*0.5);
+    context.fillText("NU",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    }    
+    else if(colorLoop == 8){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#000000";
+    //draw the words, and set the positon
+    context.fillText(words1[0], (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
+
     }
+    else if(colorLoop == 9){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#000000";
+    //draw the words, and set the positon
+    context.fillText(words1[1], (innerWidth*0.5 - 35), (innerHeight*0.5-35));
+    }
+    else if(colorLoop == 10 || colorLoop == 11){
+    //set the font
+    context.font = "100px Georgia";
+    //set the textAlign
+    //context.textAlign = "left";
+    //set the color 
+    context.fillStyle = "#000000";
+    //draw the words, and set the positon
+    context.fillText(words1[2],(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    }
+
     // else if(colorLoop == 8){
     // //set the font
     // context.font = "100px Georgia";

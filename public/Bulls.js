@@ -79,7 +79,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#D4001F";
     //draw the words, and set the positon
-    context1.fillText(words2[0], innerWidth*0.07, innerHeight*0.57);
+    context1.fillText("LET'S", (innerWidth*0.5 - 130), innerHeight*0.57);
 
     }
     else if(colorLoop1 == 1){
@@ -90,7 +90,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#D4001F";
     //draw the words, and set the positon
-    context1.fillText(words2[1], innerWidth*0.27, innerHeight*0.57);
+    context1.fillText("GO", (innerWidth*0.5 - 70), innerHeight*0.57);
 
     }
     else if(colorLoop1 == 2){
@@ -101,7 +101,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context1.fillText(words2[2], innerWidth*0.01, innerHeight*0.57);
+    context1.fillText("BULL", (innerWidth*0.5 - 125), innerHeight*0.57);
     }
 
    colorLoop1 = colorLoop1 + 1;
