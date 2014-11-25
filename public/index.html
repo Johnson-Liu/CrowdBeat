@@ -125,7 +125,7 @@
 			<a data-icon="back" data-rel="back" style="margin-top:2px;">BACK</a>
 		</div>
 		<div data-role="content" data-theme="a">	
-           <a href="#arcade" type="button" data-theme="a" onclick="QueryServer()" data-transition="pop"><div id="subheading">ARCADE FIRE</div></a>
+           <a type="button" data-theme="a" onclick="QueryServer()" data-transition="pop"><div id="subheading">ARCADE FIRE</div></a>
 			<a href="#kenny" type="button" data-theme="a" data-transition="pop"><div id="subheading">KENNY G</div></a>
 			<a href="#phil" type="button" data-theme="a" data-transition="pop"><div id="subheading">PHIL COLLINS</div></a>
 		</div>
@@ -242,6 +242,7 @@
             }
             else{
                 //get the million seconds since 1970
+                window.location.href = "#arcade"; 
                 var d = new Date();
                 var userTimeMS = d.getTime();
                 var timeOffset = userTimeMS - TimeResult;
