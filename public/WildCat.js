@@ -147,37 +147,4 @@ function manualColorSet(){
      canvas.width = innerWidth;
 
      canvas.height = innerHeight;
-     if (!canvas) { 
-    console.log('Failed to retrieve the <canvas> element');
-    return false; 
-  } 
-  //alert("test1");
-  // Get the rendering context for 2DCG
-  var context = canvas.getContext('2d');
-  // s = myDate.getSeconds();
-  //alert(s);
-
-  // sleep(3000);
-  s =  myDate.getSeconds();
-  //alert(s2);
-
-  //let the code sleep until another new second comes
-  while(true){
-    var TempDate = new Date();
-    ms = TempDate.getMilliseconds();
-    // s = s+1;
-    if(ms == 0)
-      break;
-  }
-
-    s = s+1;
-    r = s%colors.length;
-    //alert(colors.length);
-    colorLoop = r;
-    // alert(s);
-    //  every 1000ms, run the colorChange function
-    var interal = setInterval(function () {
-        colorChange(canvas,context,r);
-    }, 1000);
-}
  }

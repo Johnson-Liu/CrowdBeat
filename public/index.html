@@ -58,9 +58,9 @@
 			<a data-icon="home" data-rel="back" style="margin-top:2px;">HOME</a>
 		</div>
 		<div data-role="content" data-theme="a">	
-			<a href="#pop" type="button" data-theme="a" data-transition="pop"><div id="subheading">CHICAGO BULLS</div></a>
+			<a href="#pop" type="button" onclick="bulls()"data-theme="a" data-transition="pop"><div id="subheading">CHICAGO BULLS</div></a>
 			<a href="#fade" type="button" class="grey" data-theme="a" data-transition="pop"><div id="subheading">CHICAGO BLACKHAWKS</div></a>
-			<a href="#slidedown" type="button" data-theme="a" data-transition="pop"><div id="subheading">NORTHWESTERN WILDCATS</div></a>
+			<a href="#slidedown" type="button" id="canvasDraw" data-theme="a" onclick="wildcats()"data-transition="pop"><div id="subheading">NORTHWESTERN WILDCATS</div></a>
 		</div>
 	</div>
 	<script>
@@ -96,8 +96,6 @@
             <canvas id="example2" >
 		      Please use a browser that supports "canvas"
 		    </canvas>
-		     <a type="button" data-theme="a" data-transition="pop">Start Bulb</a>
-		    <!--<input id="canvasDraw2" type="button" onclick="QueryServer()" value="Start Bulb" />-->
 		</div>
 	</div>
 <!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
@@ -134,12 +132,12 @@
 	</div>	
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 		<script type="text/javascript">
-        $(function() {
+		function wildcats(){
             var sizedWindowWidth = $(window).width();
             //$("#example").width(sizedWindowWidth);
             //$("#example").height(sizedWindowWidth);
  
-            $("#canvasDraw").click(function(){
+           // $("#canvasDraw").click(function(){
                 var canvas = $("#example").get(0);
  
                 if(canvas)
@@ -154,8 +152,8 @@
                         main();
                     }
                 }
-            });
-        });
+           // });
+        }
     </script>
 		<div id="slidedown" data-role="page" data-theme="a">
 		<div data-role="header">
@@ -166,17 +164,16 @@
 			<canvas id="example" >
 		      Please use a browser that supports "canvas"
 		    </canvas>
-		    <input id="canvasDraw" type="button" value="Start Bulb" />
 		</div>
 	</div>	
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<script type="text/javascript">
-        $(function() {
+	function bulls(){
             var sizedWindowWidth1 = $(window).width();
  
             //$("#example").width(sizedWindowWidth);
             //$("#example").height(sizedWindowWidth);
-            $("#canvasDraw1").click(function(){
+
                 var canvas1 = $("#example1").get(0);
  	
                 if(canvas1)
@@ -190,8 +187,7 @@
                         BullsMain();
                     }
                 }
-            });
-        });
+        }
     </script>
 	<div id="pop" data-role="page" data-theme="a">
 		<div data-role="header">
@@ -202,7 +198,6 @@
 			<canvas id="example1" >
 		      Please use a browser that supports "canvas"
 		    </canvas>
-		    <input id="canvasDraw1" type="button" value="Start Bulb" />
 		</div>
 	</div>	
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
