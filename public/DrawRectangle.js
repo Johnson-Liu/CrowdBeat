@@ -1,7 +1,7 @@
   var colorLoop = 0;
   var colors = ["second1", "second2", "second3","second4", "second5","second6","second7","second8","second9","second10","second11","second12"];
   var myDate = new Date();
-  var words1 = ["GO", "WILD", "CATS", "GO WILDCATS"];
+  var words1 = ["GO", "U", "NU"];
 
   colors[0] = ["#110014","#220029", "#33003D","#440052"];
   //colors[0] = ["white","#220029", "#33003D","#440052"];
@@ -79,7 +79,7 @@ function colorChange(context, r) {
    context.fillRect(0, 0, innerWidth, innerHeight);
 
    //show the words
-    if(colorLoop == 1){
+    if(colorLoop == 0 ||colorLoop == 6){
     //set the font
     context.font = "100px Georgia";
     //set the textAlign
@@ -90,7 +90,7 @@ function colorChange(context, r) {
     context.fillText(words1[0], innerWidth*0.25, innerHeight*0.5);
 
     }
-    else if(colorLoop == 3){
+    else if(colorLoop == 2 || colorLoop == 8){
     //set the font
     context.font = "100px Georgia";
     //set the textAlign
@@ -100,28 +100,28 @@ function colorChange(context, r) {
     //draw the words, and set the positon
     context.fillText(words1[1], innerWidth*0.10, innerHeight*0.5);
     }
-    else if(colorLoop == 5){
+    else if(colorLoop == 4  || colorLoop == 10 || colorLoop == 5  || colorLoop == 11  ){
     //set the font
     context.font = "100px Georgia";
     //set the textAlign
     //context.textAlign = "left";
     //set the color 
-    context.fillStyle = "#FFFFFF";
+    context.fillStyle = "#000000";
     //draw the words, and set the positon
     context.fillText(words1[2],innerWidth*0.10, innerHeight*0.5);
     }
-    else if(colorLoop == 8){
-    //set the font
-    context.font = "100px Georgia";
-    //set the textAlign
-    //context.textAlign = "left";
-    //set the color 
-    context.fillStyle = "#FFFFFF";
-    //draw the words, and set the positon
-    context.fillText(words1[0],innerWidth*0.25,innerHeight*0.3);
-    context.fillText(words1[1],innerWidth*0.10,innerHeight*0.5);
-    context.fillText(words1[2],innerWidth*0.10,innerHeight*0.7);
-    }
+    // else if(colorLoop == 8){
+    // //set the font
+    // context.font = "100px Georgia";
+    // //set the textAlign
+    // //context.textAlign = "left";
+    // //set the color 
+    // context.fillStyle = "#FFFFFF";
+    // //draw the words, and set the positon
+    // context.fillText(words1[0],innerWidth*0.25,innerHeight*0.3);
+    // context.fillText(words1[1],innerWidth*0.10,innerHeight*0.5);
+    // context.fillText(words1[2],innerWidth*0.10,innerHeight*0.7);
+    // }
 
    colorLoop = colorLoop + 1;
    if(colorLoop ==colors.length){
