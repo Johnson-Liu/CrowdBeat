@@ -101,7 +101,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context1.fillText("BULLS", (innerWidth*0.5 - 140), innerHeight*0.57);
+    context1.fillText("BULLS", (innerWidth*0.5 - 159), innerHeight*0.57);
     }
 
    colorLoop1 = colorLoop1 + 1;
