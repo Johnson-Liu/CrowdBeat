@@ -1,7 +1,7 @@
   var colorLoop1 = 0;
   var colors1 = ["second1", "second2", "second3","second4"];
   var myDate1 = new Date();
-  var words2 = ["LET'S", "GO", "BULL"];
+  var words2 = ["LET'S", "GO", "BULLS"];
 
   colors1[0] = ["#FFFFFF","#FFFFFF","#FFFFFF"];
   colors1[1] = ["#000000","#000000","#000000"];
@@ -101,7 +101,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context1.fillText("BULL", (innerWidth*0.5 - 125), innerHeight*0.57);
+    context1.fillText("BULLS", (innerWidth*0.5 - 140), innerHeight*0.57);
     }
 
    colorLoop1 = colorLoop1 + 1;
