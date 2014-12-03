@@ -6,7 +6,7 @@ html, body{
 
 #heading{
 
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
@@ -106,8 +106,8 @@ html, body{
     box-shadow: 0 0 3px gray;
     margin: 0 auto;
     margin-top: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 8.0em;
+    margin-right: 0em;
 
 } 
 
@@ -115,7 +115,6 @@ html, body{
     font-size: 5vh;
     font-weight: bold;
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
-    padding-top:40%;
     text-align:center;
     text-transform: uppercase;
     color: #34495e;
