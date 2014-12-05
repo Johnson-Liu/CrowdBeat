@@ -1,7 +1,7 @@
   var colorLoop = 0;
   var colors = ["second1", "second2", "second3","second4", "second5","second6","second7","second8","second9","second10","second11","second12"];
   var myDate = new Date();
-  var words1 = ["GO", "U", "NU"];
+  //var words1 = ["GO", "U", "NU"];
 
   colors[0] = ["#110014","#220029", "#33003D","#440052"];
   //colors[0] = ["white","#220029", "#33003D","#440052"];
@@ -37,27 +37,46 @@ function main() {
   //alert(s);
 
   // sleep(3000);
-  s =  myDate.getSeconds();
+   acquireServerMS();
   //alert(s2);
+  serverMS = localStorage.getItem("ServerMS");
+  waitTime = 999 - serverMS;
+
+  setTimeout(function(){enter(context)},waitTime);
+
 
   //let the code sleep until another new second comes
-  while(true){
-    var TempDate = new Date();
-    ms = TempDate.getMilliseconds();
-    // s = s+1;
-    if(ms == 0)
-      break;
-  }
+  // while(true){
+  //   var TempDate = new Date();
+  //   ms = TempDate.getMilliseconds();
+  //   // s = s+1;
+  //   if(ms == 0)
+  //     break;
+  // }
 
-    s = s+1;
-    r = s%colors.length;
+    // s = s+1;
+    // r = s%colors.length;
+    // //alert(colors.length);
+    // colorLoop = r;
+    // // alert(s);
+    // //  every 1000ms, run the colorChange function
+    // var interal = setInterval(function () {
+    //     colorChange(context,r);
+    // }, 1000);
+}
+
+function enter(context){
+    s1 = localStorage.getItem("ServerS");
+    r1 = s1%colors1.length;
     //alert(colors.length);
-    colorLoop = r;
+    colorLoop1 = r1;
     // alert(s);
     //  every 1000ms, run the colorChange function
-    var interal = setInterval(function () {
-        colorChange(context,r);
+    var interal1 = setInterval(function () {
+        colorChange1(context,r1);
     }, 1000);
+
+
 }
 
 
@@ -87,7 +106,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("GO", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
+    context.fillText("GO1", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
 
     }
     else if(colorLoop == 1){
@@ -98,7 +117,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("U", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
+    context.fillText("U1", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
     }
     else if(colorLoop == 2 ||colorLoop ==3 ){
     //set the font
@@ -108,7 +127,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("NU",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    context.fillText("NU1",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
     }
         if(colorLoop == 4){
     //set the font
@@ -118,7 +137,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("GO", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
+    context.fillText("GO1", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
 
     }
     else if(colorLoop == 5){
@@ -129,7 +148,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("U", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
+    context.fillText("U1", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
     }
     else if(colorLoop == 6 || colorLoop ==7){
     //set the font
@@ -139,7 +158,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText("NU",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    context.fillText("NU1",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
     }    
     else if(colorLoop == 8){
     //set the font
@@ -149,7 +168,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText(words1[0], (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
+    context.fillText("GO1", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
 
     }
     else if(colorLoop == 9){
@@ -160,7 +179,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText(words1[1], (innerWidth*0.5 - 35), (innerHeight*0.5-35));
+    context.fillText("U1", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
     }
     else if(colorLoop == 10 || colorLoop == 11){
     //set the font
@@ -170,7 +189,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText(words1[2],(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    context.fillText("NU1",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
     }
 
     // else if(colorLoop == 8){
@@ -191,6 +210,22 @@ function colorChange(context, r) {
     colorLoop =0;
    }      
 }
+
+
+function acquireServerMS(){
+    Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
+    Parse.Cloud.run('hello', {}, {
+      success: function(result) {
+        // result is 'Hello World'
+        localStorage.setItem("ServerMS",result[0]);
+        localStorage.setItem("ServerS", result[1]);
+      },
+      error: function(error) {
+      }
+    });
+
+} 
+
 
 /**
  * Returns a random integer between min (inclusive) and max (inclusive)

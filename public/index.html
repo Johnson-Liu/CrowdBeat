@@ -242,15 +242,16 @@
             }
             else{
                 //get the million seconds since 1970
+                acquireServerMS();
                 window.location.href = "#arcade"; 
-                var d = new Date();
-                var userTimeMS = d.getTime();
+                var indexDate  = new Date();
+                var userTimeMS = indexDate.getTime();
                 var timeOffset = userTimeMS - TimeResult;
-                if(timeOffset>=94000){
+                if(timeOffset>=93000){
                     alert("The show is over!")
                 }
                 else{
-                    BullsMain2(timeOffset);
+                    BullsMain2();
                 }
                 //alert(timeOffset); 
 
@@ -261,6 +262,8 @@
          });  
 
     }
+
+
 
     </script>
 		<div id="flip" data-role="page" data-theme="a">

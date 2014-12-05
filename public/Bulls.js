@@ -1,6 +1,6 @@
   var colorLoop1 = 0;
   var colors1 = ["second1", "second2", "second3","second4"];
-  var myDate1 = new Date();
+
   var words2 = ["LET'S", "GO", "BULLS"];
 
   colors1[0] = ["#FFFFFF","#FFFFFF","#FFFFFF"];
@@ -25,21 +25,83 @@ function BullsMain() {
   var context1 = canvas1.getContext('2d');
   // s = myDate.getSeconds();
   //alert(s);
-
-  // sleep(3000);
-  s1 =  myDate1.getSeconds();
+  // mark1 = 
   //alert(s2);
+  // acquireServerMS();
+  // alert(localStorage.getItem("ServerMS"));
+  // //alert(s2);
+  var dateMark1 = new Date();
+  var mark1 = dateMark1.getTime();
+  acquireServerMS();
+  var dateMark2 = new Date();
+  var mark2 = dateMark2.getTime();
+  var tranOffset = mark2 - mark1;
+  alert(tranOffset);
 
-  //let the code sleep until another new second comes
-  while(true){
-    var TempDate1 = new Date();
-    ms1 = TempDate1.getMilliseconds();
-    // s = s+1;
-    if(ms1 == 0)
-      break;
-  }
 
-    s1 = s1+1;
+  //alert(localStorage.getItem("ServerMS"));
+
+  serverMS = localStorage.getItem("ServerMS");
+  waitTime = 999 - serverMS-tranOffset;
+
+  setTimeout(function(){enter(context1)},waitTime);
+
+  // while(true){
+  //   acquireServerMS();
+  //   ms1 = localStorage.getItem("ServerMS");
+  //   // s = s+1;
+  //   if(ms1 ==0)
+  //     break;
+  // }
+  // alert(localStorage.getItem("ServerMS"));
+  //   var myDate1 = new Date();
+  // // sleep(3000);
+  //   s1 =  myDate1.getSeconds();
+  //   s1 = s1+1;
+  //   r1 = s1%colors1.length;
+  //   //alert(colors.length);
+  //   colorLoop1 = r1;
+  //   // alert(s);
+  //   //  every 1000ms, run the colorChange function
+  //   var interal1 = setInterval(function () {
+  //       colorChange1(context1,r1);
+  //   }, 1000);
+}
+function acquireServerMS(){
+    Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
+    Parse.Cloud.run('hello', {}, {
+      success: function(result) {
+        // result is 'Hello World'
+        localStorage.setItem("ServerMS",result[0]);
+        localStorage.setItem("ServerS", result[1]);
+      },
+      error: function(error) {
+      }
+    });
+
+} 
+
+// function acquireServerS(){
+//     Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
+//     Parse.Cloud.run('hello2', {}, {
+//       success: function(result) {
+//         // result is 'Hello World'
+//         localStorage.setItem("ServerS",result);
+//       },
+//       error: function(error) {
+//       }
+//     });
+
+// } 
+
+
+
+
+
+
+
+function enter(context1){
+    s1 = localStorage.getItem("ServerS");
     r1 = s1%colors1.length;
     //alert(colors.length);
     colorLoop1 = r1;
@@ -48,8 +110,9 @@ function BullsMain() {
     var interal1 = setInterval(function () {
         colorChange1(context1,r1);
     }, 1000);
-}
 
+
+}
 
 
 
@@ -79,7 +142,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#D4001F";
     //draw the words, and set the positon
-    context1.fillText("LET'S", (innerWidth*0.5 - 130), innerHeight*0.57);
+    context1.fillText("LET'S2", (innerWidth*0.5 - 130), innerHeight*0.57);
 
     }
     else if(colorLoop1 == 1){
