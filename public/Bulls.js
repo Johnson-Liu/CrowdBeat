@@ -11,7 +11,9 @@
   //#FFFFFF means white color
   //#000000 means black color
 
-function BullsMain() { 
+
+
+function BullsMain1() { 
   // alert(colors[0][0]);
   var canvas1 = document.getElementById('example1');  
   canvas1.width = innerWidth;
@@ -32,11 +34,10 @@ function BullsMain() {
   // //alert(s2);
   var dateMark1 = new Date();
   var mark1 = dateMark1.getTime();
-  acquireServerMS();
+  acquireServerMS1();
   var dateMark2 = new Date();
   var mark2 = dateMark2.getTime();
   var tranOffset = mark2 - mark1;
-  alert(tranOffset);
 
 
   //alert(localStorage.getItem("ServerMS"));
@@ -44,7 +45,7 @@ function BullsMain() {
   serverMS = localStorage.getItem("ServerMS");
   waitTime = 999 - serverMS-tranOffset;
 
-  setTimeout(function(){enter(context1)},waitTime);
+  setTimeout(function(){enter1(context1)},waitTime);
 
   // while(true){
   //   acquireServerMS();
@@ -67,7 +68,7 @@ function BullsMain() {
   //       colorChange1(context1,r1);
   //   }, 1000);
 }
-function acquireServerMS(){
+function acquireServerMS1(){
     Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
     Parse.Cloud.run('hello', {}, {
       success: function(result) {
@@ -100,7 +101,7 @@ function acquireServerMS(){
 
 
 
-function enter(context1){
+function enter1(context1){
     s1 = localStorage.getItem("ServerS");
     r1 = s1%colors1.length;
     //alert(colors.length);
@@ -142,7 +143,7 @@ function colorChange1(context1, r1) {
     //set the color 
     context1.fillStyle = "#D4001F";
     //draw the words, and set the positon
-    context1.fillText("LET'S2", (innerWidth*0.5 - 130), innerHeight*0.57);
+    context1.fillText("LET'S", (innerWidth*0.5 - 130), innerHeight*0.57);
 
     }
     else if(colorLoop1 == 1){
@@ -177,10 +178,10 @@ function colorChange1(context1, r1) {
  * Returns a random integer between min (inclusive) and max (inclusive)
  * Using Math.round() will give you a non-uniform distribution!
  */
-function getRandomInt(min, max) {
+function getRandomInt1(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function manualColorSet(){
+function manualColorSet1(){
   //function to manually set color
   // preload array of colors
   // draw rectangle with certain color based on how much time has passed

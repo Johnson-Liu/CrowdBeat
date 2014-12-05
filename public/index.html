@@ -147,7 +147,7 @@
                         //canvasContext.canvas.width  = sizedWindowWidth;
                         //canvasContext.canvas.height = sizedWindowWidth;
 
-                        main1();
+                        main();
                     }
                 }
            // });
@@ -182,7 +182,7 @@
                     {
                         //canvasContext.canvas.width  = sizedWindowWidth;
                         //canvasContext.canvas.height = sizedWindowWidth;
-                        BullsMain();
+                        BullsMain1();
                     }
                 }
         }
@@ -240,17 +240,15 @@
             }
             else{
                 //get the million seconds since 1970
-                acquireServerMS();
                 window.location.href = "#arcade"; 
-                var indexDate  = new Date();
-                var userTimeMS = indexDate.getTime();
-                localStorage.setItem("AdminStartMS",userTimeMS); 
+                var d = new Date();
+                var userTimeMS = d.getTime();
                 var timeOffset = userTimeMS - TimeResult;
-                if(timeOffset>=93000){
+                if(timeOffset>=94000){
                     alert("The show is over!")
                 }
                 else{
-                    BullsMain2();
+                    BullsMain2(timeOffset);
                 }
                 //alert(timeOffset); 
 

@@ -21,7 +21,9 @@
   //#FFFFFF means white color
   //#000000 means black color
 
-function main1() { 
+
+
+function main() { 
   // alert(colors[0][0]);
   var canvas = document.getElementById('example');  
   canvas.width = innerWidth;
@@ -37,12 +39,12 @@ function main1() {
   //alert(s);
 
   // sleep(3000);
-   acquireServerMS();
+   acquireServerMS2();
   //alert(s2);
   serverMS = localStorage.getItem("ServerMS");
-  waitTime = 999 - serverMS;
+  waitTime = 998 - serverMS;
 
-  setTimeout(function(){enter(context)},waitTime);
+  setTimeout(function(){enter2(context)},waitTime);
 
 
   //let the code sleep until another new second comes
@@ -65,22 +67,22 @@ function main1() {
     // }, 1000);
 }
 
-function enter(context){
+function enter2(context){
     s1 = localStorage.getItem("ServerS");
     r1 = s1%colors1.length;
     //alert(colors.length);
-    colorLoop1 = r1;
+    colorLoop = r1;
     // alert(s);
     //  every 1000ms, run the colorChange function
     var interal1 = setInterval(function () {
-        colorChange(context,r1);
+        colorChange2(context,r1);
     }, 1000);
 
 
 }
 
 
-function colorChange(context, r) {
+function colorChange2(context, r) {
   //clear all the screen
    //give color to the paint
    //context.fillStyle = "white";
@@ -211,7 +213,7 @@ function colorChange(context, r) {
 }
 
 
-function acquireServerMS(){
+function acquireServerMS2(){
     Parse.initialize("wpInUaSnMuLflYrSMnv7c1SvNNuLbFoAT3S5Oby8","yLMJwfxDUcl5bi2O9Q7NngCYOxvraRUhq9eXySVB");
     Parse.Cloud.run('hello', {}, {
       success: function(result) {
