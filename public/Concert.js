@@ -112,23 +112,8 @@ var colorsC = ["#2980b9","#2980b9", "#206084", "#206084", "#2c3e50", "#2c3e50" ,
 
 
 function BullsMain2(){ 
-      alert("test");
-      Parse.initialize("R1hjTepo1Qyv2WVVYxD6g5K2CVqqGIXPLjqPmsZF", "eLLqf2YbjLgt8aNvsQyasUIL2jTEgoBvCDH1bRmI");
-          var BulbObj = Parse.Object.extend("Bulb") ;
-          var bulbObj1 = new BulbObj();
-          var ParseQuery = new Parse.Query(BulbObj);
-          //alert("getState");
-         ParseQuery.get("AbUQiOYkBN", {
-          success: function(bulbObj1) {
-            var StateResult = bulbObj1.get("State");
-            var TimeResult=  bulbObj1.get("TimeValue");
-            alert(TimeResult);
-            //get the million seconds since 1970
-            // acquireServerMS();
-            // BullsMain2new(StartTime);
-            }
-         });  
-
+  var AdminStartTime = localStorage.getItem("AdminStartMS"); 
+  BullsMain2new(AdminStartTime);
 }
 
 
@@ -148,10 +133,10 @@ function BullsMain2new(StartTime) {
   acquireServerMS();
   var timeOffset = localStorage.getItem("MS") - StartTime;
   alert(timeOffset);
-  var result = timeOffset/125;///1000;
-  colorLoop2 = Math.floor(result);
-  var waitTime = colorLoop2*125 + 125 - timeOffset;
-  setTimeout(function(){enter(context2)},waitTime);
+  // var result = timeOffset/125;///1000;
+  // colorLoop2 = Math.floor(result);
+  // var waitTime = colorLoop2*125 + 125 - timeOffset;
+  // setTimeout(function(){enter(context2)},waitTime);
 
   //alert(result);
   // alert(timeOffset);
@@ -189,10 +174,10 @@ function acquireServerMS(){
     Parse.Cloud.run('hello', {}, {
       success: function(result) {
         // result is 'Hello World'
-        localStorage.setItem("ServerMS",result[0]);
+        localStorage.setItem("MS","1");
+        localStorage.setItem("ServerMS1",result[0]);
         localStorage.setItem("ServerS", result[1]);
-        //ms since 1970 year
-        localStorage.setItem("MS",result[2]);
+
       },
       error: function(error) {
       }

@@ -18,9 +18,7 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 	<script type="text/javascript" src="Bulls.js"></script>
-	<script type="text/javascript" src="Wildcat.js"></script>
 	<script type="text/javascript" src="Concert.js"></script>
-	
 	<script type="text/javascript" src="DrawRectangle.js"></script>
 	<script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
 </head>
@@ -149,7 +147,7 @@
                         //canvasContext.canvas.width  = sizedWindowWidth;
                         //canvasContext.canvas.height = sizedWindowWidth;
 
-                        main();
+                        main1();
                     }
                 }
            // });
@@ -246,6 +244,7 @@
                 window.location.href = "#arcade"; 
                 var indexDate  = new Date();
                 var userTimeMS = indexDate.getTime();
+                localStorage.setItem("AdminStartMS",userTimeMS); 
                 var timeOffset = userTimeMS - TimeResult;
                 if(timeOffset>=93000){
                     alert("The show is over!")

@@ -21,7 +21,7 @@
   //#FFFFFF means white color
   //#000000 means black color
 
-function main() { 
+function main1() { 
   // alert(colors[0][0]);
   var canvas = document.getElementById('example');  
   canvas.width = innerWidth;
@@ -73,7 +73,7 @@ function enter(context){
     // alert(s);
     //  every 1000ms, run the colorChange function
     var interal1 = setInterval(function () {
-        colorChange1(context,r1);
+        colorChange(context,r1);
     }, 1000);
 
 
@@ -106,8 +106,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("GO1", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
-
+    context.fillText("GO", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
     }
     else if(colorLoop == 1){
     //set the font
@@ -117,7 +116,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("U1", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
+    context.fillText("U", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
     }
     else if(colorLoop == 2 ||colorLoop ==3 ){
     //set the font
@@ -127,7 +126,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("NU1",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    context.fillText("NU",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
     }
         if(colorLoop == 4){
     //set the font
@@ -137,7 +136,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("GO1", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
+    context.fillText("GO", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
 
     }
     else if(colorLoop == 5){
@@ -148,7 +147,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#FFFFFF";
     //draw the words, and set the positon
-    context.fillText("U1", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
+    context.fillText("U", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
     }
     else if(colorLoop == 6 || colorLoop ==7){
     //set the font
@@ -158,7 +157,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText("NU1",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    context.fillText("NU",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
     }    
     else if(colorLoop == 8){
     //set the font
@@ -168,7 +167,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText("GO1", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
+    context.fillText("GO", (innerWidth*0.5 - 70), (innerHeight*0.5 -35));
 
     }
     else if(colorLoop == 9){
@@ -179,7 +178,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText("U1", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
+    context.fillText("U", (innerWidth*0.5 - 35), (innerHeight*0.5-35));
     }
     else if(colorLoop == 10 || colorLoop == 11){
     //set the font
@@ -189,7 +188,7 @@ function colorChange(context, r) {
     //set the color 
     context.fillStyle = "#000000";
     //draw the words, and set the positon
-    context.fillText("NU1",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
+    context.fillText("NU",(innerWidth*0.5 - 70), (innerHeight*0.5-35));
     }
 
     // else if(colorLoop == 8){
